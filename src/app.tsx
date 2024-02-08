@@ -2,6 +2,11 @@ import logo from './assets/Logo.svg'
 import { NewNoteCard } from './components/new-note-card'
 import { NoteCard } from './components/note-card'
 
+const note = {
+  date: new Date(),
+  content: 'Hello world'
+}
+
 export function App() {
   return (
     <div className="mx-auto ml-12 max-w-6xl my-12 space-y-6">
@@ -11,7 +16,7 @@ export function App() {
       <form action="" className="w-full mt-6">
         <input 
           type="text"  
-          placeholder='Busque em suas notas...'
+          placeholder='Busque em suas notas... ✍(◔◡◔)'
           className='w-full bg-transparent text-3xl font-semibold tracking-tight outline-none placeholder:text-slate-500'
           />
       </form>
@@ -29,9 +34,7 @@ export function App() {
         {/* END NewNoteCard */}
 
         {/* START NoteCard */}
-        <NoteCard />
-        <NoteCard />
-        <NoteCard />
+        <NoteCard  note={note}/>
         {/* END NoteCard */}
 
       </div>
